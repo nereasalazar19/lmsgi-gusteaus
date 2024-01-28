@@ -1,16 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 #contenedor {
     background-color: #fff8f0;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', serif;
     font-size: 16px;
 }
 
 
 .encabezado {
-    background-image: url(../imgs/guesteaus.png);
+    background-image: url('/imgs/guesteaus.png');
     background-size: cover;
     background-position: center;
     color: #5a3e36;
     font-family: Georgia, serif;
+    font-weight: bold;
     font-size: 36px;
     text-align: center;
     padding: 50px;
@@ -20,38 +27,82 @@
     display: table;
     clear: both;
 }
+.encabezado p {
+    background-color: #ffc5a4;
 
+}
+
+.encabezado img {
+    float: left;
+    max-width: 10%;
+}
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #a77e58;
+    display: flex;
+    justify-content: center;
+}
+.menu ul li {
+    display: inline;
+}
 
 .menu ul li a {
-    background-color: #a77e58;
+    display: block;
+    padding: 10px 20px;
     color: #ffffff;
-    font-family: Helvetica, sans-serif;
+    font-family: 'Helvetica', sans-serif;
     font-size: 18px;
     text-decoration: none;
-    display: block;
-    padding: 10px;
+    transition: color 0.3s ease;
 }
 
 .menu ul li a:hover {
+    color: #5a3e36;
     background-color: #8b6f47;
+}
+.menu ul li.active {
+    border-bottom: 2px solid #ffffff;
+    font-weight: bold;
 }
 
 
 .contenido {
-    background-color: #fff8f0;
-    color: #5a3e36;
-    font-family: Georgia, serif;
-    font-size: 18px;
+    float: left;
+    width: 70%;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
+
+.contenido ul{
+    margin: 10px;
+    margin-left: 30px;
+}
+.contenido ul li {
+    margin: 5px;
+}
 
 .sidebar {
+    float: right;
+    width: 30%;
+    padding: 20px 10px 10px 30px ;
     background-color: #ecdcc6;
-    color: #5a3e36;
+    box-sizing: border-box;
+    border: 1px solid #5a3e36;
     font-family: Georgia, serif;
-    font-size: 18px;
 }
 
+.sidebar ul {
+    margin-left: 30px;
+}
+
+#contenedor::after {
+    content: "";
+    display: table;
+    clear: both;
+}
 
 .pie {
     background-color: #a77e58;
@@ -60,14 +111,63 @@
     font-size: 16px;
     text-align: center;
     padding: 20px;
-}
-
-.pie a {
-    color: #ffffff;
-    text-decoration: none;
+    margin-top: 10px;
+    clear: both;
+    width: 100%;
     margin: 0 10px; 
 }
 
 .pie .derechos-de-autor {
     margin-top: 10px; 
+    text-align: right;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #a77e58;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul li {
+        margin-bottom: 10px;
+        display: block;
+    }
+}
+
+
+#contenedor::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.contenido h1,
+.contenido h2,
+.contenido h3,
+.sidebar h2 {
+    color: #5a3e36;
+    margin: 10px;
+}
+
+.contenido p,
+.sidebar p,
+.sidebar ul li {
+    color: #5a3e36;
+    line-height: 1.5;
+}
+
+.contenido {
+    background-color: #fff8f0;
+    border: 1px solid #a77e58;
 }
