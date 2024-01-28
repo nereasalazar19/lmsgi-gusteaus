@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#contenedor {
+    background-color: #fff8f0;
+    font-family: 'Times New Roman', serif;
+    font-size: 16px;
+}
+
+.encabezado p {
+    background-color: #ffc5a4;
+
+}
+
+.encabezado {
+    background-image: url('/imgs/guesteaus.png');
+    background-size: cover;
+    background-position: center;
+    color: #5a3e36;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    font-size: 36px;
+    text-align: center;
+    padding: 50px;
+}
+
+.encabezado::after {
+    display: table;
+    clear: both;
+}
+
+.encabezado img {
+    float: left;
+    max-width: 10%;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #a77e58;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul li {
+    display: inline;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+    color: #5a3e36;
+    background-color: #8b6f47;
+}
+
+.menu ul li.active {
+    border-bottom: 2px solid #ffffff;
+    font-weight: bold;
+}
+
+
+
+.sidebar {
+    float: right;
+    width: 30%;
+    padding: 20px 10px 10px 30px;
+    background-color: #ecdcc6;
+    box-sizing: border-box;
+    border: 1px solid #5a3e36;
+    font-family: Georgia, serif;
+}
+
+#contenedor::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.pie {
+    background-color: #a77e58;
+    color: #ffffff;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+    clear: both;
+    width: 100%;
+}
+
+.pie .derechos-de-autor {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.sidebar h2 {
+    color: #5a3e36;
+    margin: 10px;
+}
+
+.formulario-reserva {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario-reserva form {
+    width: 70%;
+    max-width: 600px;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='tel'] {
+    border: 1px solid #a77e58;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff8f0;
+}
+
+input[type='submit'],
+button {
+    background-color: #5a3e36;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+   
+}
+
+input[type='submit']:hover,
+button:hover {
+    background-color: #a77e58;
+}
+
+label {
+    font-size: 16px;
+    display: block;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul li {
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    input[type='text'],
+    input[type='email'],
+    input[type='tel'],
+    input[type='submit'],
+    button {
+        width: 100%;
+    }
+}
+
+input:invalid,
+textarea:invalid {
+    border-color: #ff6347;
+}
+
+
+input::placeholder,
+textarea::placeholder {
+    color: #a77e58; 
+}
+
+
+input:valid,
+textarea:valid {
+    border-color: #5a3e36;
+}
+
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: #a77e58;
+}
+
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #a77e58;
+}
+
+fieldset {
+    border: 1px solid #a77e58;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
+    
+}
+
+legend {
+    font-size: 20px;
+    color: #5a3e36;
+    font-weight: bold;
+}
+
+h1 {
+    color: #5a3e36;
+    margin: 20px;
+}
+

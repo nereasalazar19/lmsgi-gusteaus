@@ -1,0 +1,106 @@
+body {
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+
+}
+
+header {
+    background-image: url('/imgs/guesteaus.png');
+    background-size: cover;
+    background-position: center;
+    color: #5a3e36;
+    font-family: Georgia, serif;
+    font-weight: bold;
+    text-align: center;
+    padding: 30px;
+}
+header h1 {
+    background-color: #ffc5a4;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.menu-estrella {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #a77e58;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: #ffffff;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #5a3e36;
+    background-color: #8b6f47;
+}
+
+nav ul li.active {
+    border-bottom: 1px solid #ffffff;
+    font-weight: bold;
+}
+
+h2 {
+    color: #5a3e36;
+    margin: 10px;
+}
+
+ul {
+    list-style-type: disc;
+    margin: 10px 0;
+}
+
+li {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    transition: background-color 0.3s ease;
+}
+
+li:hover {
+    background-color: #b69b7c;
+}
+
+[data-alergenos]::after {
+    content: " (Contiene alérgenos)";
+    font-size: 12px;
+    color: #ff6347;
+}
+
+footer {
+    background-color: #a77e58;
+    color: #ffffff;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    padding: 20px;
+    margin-top: 10px;
+    clear: both;
+    width: 100%;
+}
