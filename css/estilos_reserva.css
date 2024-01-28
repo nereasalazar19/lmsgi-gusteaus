@@ -10,6 +10,10 @@
     font-size: 16px;
 }
 
+.encabezado p {
+    background-color: #ffc5a4;
+
+}
 
 .encabezado {
     background-image: url('/imgs/guesteaus.png');
@@ -27,15 +31,12 @@
     display: table;
     clear: both;
 }
-.encabezado p {
-    background-color: #ffc5a4;
-
-}
 
 .encabezado img {
     float: left;
     max-width: 10%;
 }
+
 .menu ul {
     list-style-type: none;
     margin: 0;
@@ -44,6 +45,7 @@
     display: flex;
     justify-content: center;
 }
+
 .menu ul li {
     display: inline;
 }
@@ -62,40 +64,22 @@
     color: #5a3e36;
     background-color: #8b6f47;
 }
+
 .menu ul li.active {
     border-bottom: 2px solid #ffffff;
     font-weight: bold;
 }
 
 
-.contenido {
-    float: left;
-    width: 70%;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-
-.contenido ul{
-    margin: 10px;
-    margin-left: 30px;
-}
-.contenido ul li {
-    margin: 5px;
-}
 
 .sidebar {
     float: right;
     width: 30%;
-    padding: 20px 10px 10px 30px ;
+    padding: 20px 10px 10px 30px;
     background-color: #ecdcc6;
     box-sizing: border-box;
     border: 1px solid #5a3e36;
     font-family: Georgia, serif;
-}
-
-.sidebar ul {
-    margin-left: 30px;
 }
 
 #contenedor::after {
@@ -114,24 +98,59 @@
     margin-top: 10px;
     clear: both;
     width: 100%;
-    margin: 0 10px; 
 }
 
 .pie .derechos-de-autor {
-    margin-top: 10px; 
+    margin-top: 10px;
     text-align: right;
 }
 
-.menu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    background-color: #a77e58;
-    display: flex;
-    justify-content: center;
+.sidebar h2 {
+    color: #5a3e36;
+    margin: 10px;
 }
 
+.formulario-reserva {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.formulario-reserva form {
+    width: 70%;
+    max-width: 600px;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='tel'] {
+    border: 1px solid #a77e58;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff8f0;
+}
+
+input[type='submit'],
+button {
+    background-color: #5a3e36;
+    color: #ffffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+   
+}
+
+input[type='submit']:hover,
+button:hover {
+    background-color: #a77e58;
+}
+
+label {
+    font-size: 16px;
+    display: block;
+    margin-top: 10px;
+}
 
 @media only screen and (max-width: 768px) {
     .menu ul {
@@ -143,31 +162,61 @@
         margin-bottom: 10px;
         display: block;
     }
+
+    input[type='text'],
+    input[type='email'],
+    input[type='tel'],
+    input[type='submit'],
+    button {
+        width: 100%;
+    }
+}
+
+input:invalid,
+textarea:invalid {
+    border-color: #ff6347;
 }
 
 
-#contenedor::after {
-    content: "";
-    display: table;
-    clear: both;
+input::placeholder,
+textarea::placeholder {
+    color: #a77e58; 
 }
 
-.contenido h1,
-.contenido h2,
-.contenido h3,
-.sidebar h2 {
-    color: #5a3e36;
-    margin: 10px;
+
+input:valid,
+textarea:valid {
+    border-color: #5a3e36;
 }
 
-.contenido p,
-.sidebar p,
-.sidebar ul li {
-    color: #5a3e36;
-    line-height: 1.5;
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: #a77e58;
 }
 
-.contenido {
-    background-color: #fff8f0;
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+    color: #a77e58;
+}
+
+fieldset {
     border: 1px solid #a77e58;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
+    
 }
+
+legend {
+    font-size: 20px;
+    color: #5a3e36;
+    font-weight: bold;
+}
+
+h1 {
+    color: #5a3e36;
+    margin: 20px;
+}
+
